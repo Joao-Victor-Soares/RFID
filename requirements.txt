@@ -24,7 +24,7 @@ iso8601==2.1.0
 itsdangerous==2.2.0
 Jinja2==3.1.4
 Kivy==2.3.0
-kivy-deps.angle==0.4.0
+kivy-deps.angle
 kivy-deps.glew==0.3.1
 kivy-deps.sdl2==0.7.0
 Kivy-Garden==0.1.5
