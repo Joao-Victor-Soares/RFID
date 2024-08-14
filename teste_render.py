@@ -14,6 +14,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Carregar a chave JSON do Google Sheets da variável de ambiente
 json_key = os.getenv('GOOGLE_SHEETS_CREDENTIALS')
+google_sheets_id = os.getenv('GOOGLE_SHEET_ID')
 
 if json_key is None:
     logging.error('Variável de ambiente GOOGLE_SHEETS_CREDENTIALS não definida.')
@@ -32,7 +33,7 @@ except Exception as e:
     raise
 
 try:
-    spreadsheet = client.open_by_key(os.getenv('GOOGLE_SHEET_ID'))
+    spreadsheet = client.open_by_key(google_sheets_id)
     worksheet = spreadsheet.sheet1  # Selecione a primeira aba da planilha
     logging.info('Conexão com a planilha bem-sucedida.')
 except Exception as e:
