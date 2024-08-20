@@ -24,7 +24,7 @@ except Exception as e:
 
 # Verificar se a conexão foi bem-sucedida
 try:
-    spreadsheet = client.open_by_key('1vMINvOA0JIXUFB9SEC_8IuLuAz5tkQWsBhbddJscQ2I')
+    spreadsheet = client.open_by_key(GOOGLE_SHEETS_ID)
     worksheet = spreadsheet.sheet1  # Selecione a primeira aba da planilha
     logging.info('Conexão com a planilha bem-sucedida.')
 except Exception as e:
